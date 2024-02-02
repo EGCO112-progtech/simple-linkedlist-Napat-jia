@@ -11,9 +11,9 @@
 
 int main(int argc, const char * argv[]) {
 
-    int c=5;
+    int z=5;
     struct node a,b,*head ;
-    a.value = c;
+    a.value = z;
     a.next=&b;
     head=&a;
     b.value=head->value+3;
@@ -27,8 +27,8 @@ int main(int argc, const char * argv[]) {
     3. Make next become NULL
     4. print by using head
  */
-    struct node d ;
-    head -> next -> next = &d ;
+    struct node c ;
+    head -> next -> next = &c ;
     head -> next -> next -> value = 11 ;
     head -> next -> next -> next = NULL ;
     printf("%d\n",head -> next -> next -> value) ;
