@@ -60,6 +60,7 @@ int main(int argc, const char * argv[]) {
             printf("%3d", tmp->value);
             tmp = tmp -> next ;
         }
+    printf("\n") ;
     
    /*  Exercise IV change to while loop!! (you can use NULL to help)
        
@@ -68,8 +69,15 @@ int main(int argc, const char * argv[]) {
            // What is missing???
         }
     */
-
     
+    //Exercise 4
+    tmp = head ;
+    while(tmp!=NULL){
+        printf("%3d", tmp->value);
+        tmp = tmp -> next ;
+    }
+    printf("\n") ;
+
  /*  Exercise V Use malloc to create all nodes, instead of create a struct!!
          //use a loop to help
           
