@@ -44,9 +44,7 @@ int main(int argc, const char * argv[]) {
     printf("%d\n",head->value);
 
 
-    typedef struct node* NodePtr;
-    NodePtr tmp=head; //add temp value to faciliate
-        
+   
     /*  Exercise III Use loop to print everything
         int i,n=5;
         for(i=0;i<n;i++){
@@ -54,6 +52,14 @@ int main(int argc, const char * argv[]) {
           // What is missing???
         }
     */
+    //Exercise 3
+    typedef struct node* NodePtr;
+    NodePtr tmp=head; //add temp value to faciliate
+     int i,n=4;
+        for(i=0;i<n;i++){
+            printf("%3d", tmp->value);
+            tmp = tmp -> next ;
+        }
     
    /*  Exercise IV change to while loop!! (you can use NULL to help)
        
@@ -62,6 +68,7 @@ int main(int argc, const char * argv[]) {
            // What is missing???
         }
     */
+
     
  /*  Exercise V Use malloc to create all nodes, instead of create a struct!!
          //use a loop to help
