@@ -10,6 +10,7 @@
 #include "node.h"
 
 int main(int argc, const char * argv[]) {
+
     int c=5;
     struct node a,b,*head ;
     a.value = c;
@@ -19,16 +20,22 @@ int main(int argc, const char * argv[]) {
 
     printf("%d\n", head ->value ); //what value for 5
     printf("%d\n", head ->next->value ); //what value for 8
+
 /*  Exercise I
     1. Add 1 more than at the end
     2. Add value(11)
     3. Make next become NULL
+    4. print by using head
  */
-    
+    struct node d ;
+    head -> next -> next = &d ;
+    head -> next -> next -> value = 11 ;
+    head -> next -> next -> next = NULL ;
+    printf("%d\n",head -> next -> next -> value) ;
+
 /*  Exercise II
         1. Add 1 more than at the begining!!!!
         2. Add value (2)
-        
 */
     typedef struct node* NodePtr;
     NodePtr tmp=head; //add temp value to faciliate
