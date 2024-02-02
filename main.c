@@ -28,15 +28,22 @@ int main(int argc, const char * argv[]) {
     4. print by using head
  */
     struct node c ;
-    head -> next -> next = &c ;
-    head -> next -> next -> value = 11 ;
-    head -> next -> next -> next = NULL ;
+    head -> next -> next = &c ;    //b.next = &c
+    head -> next -> next -> value = 11 ;   //c.value = 11
+    head -> next -> next -> next = NULL ;  //c.next = NULL
     printf("%d\n",head -> next -> next -> value) ;
 
 /*  Exercise II
         1. Add 1 more than at the begining!!!!
         2. Add value (2)
 */
+    struct node d ; 
+    head = &d ;
+    head -> value = 2 ;
+    head -> next = &a ;
+    printf("%d\n",head->value);
+
+
     typedef struct node* NodePtr;
     NodePtr tmp=head; //add temp value to faciliate
         
