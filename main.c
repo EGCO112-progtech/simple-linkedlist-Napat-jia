@@ -80,13 +80,41 @@ int main(int argc, const char * argv[]) {
 
  /*  Exercise V Use malloc to create all nodes, instead of create a struct!!
          //use a loop to help
-          
+         2 5 8 11
      */
+    //Exercise 5
+    typedef struct node* nodeptr ;
+    
+    head = (nodeptr)malloc(sizeof(nodeptr)) ;
+    tmp = head ;
+    
+    for(i = 2;i<=11;i+=3){
+        
+        tmp -> value = i ;
+        if(i!=11)tmp -> next = (nodeptr)malloc(sizeof(nodeptr)) ;
+        else tmp -> next = NULL ;
+        tmp = tmp -> next ;
+    }    
+    
+    //print
+    tmp = head ;
+    while(tmp!=NULL){
+        printf("%3d", tmp->value);
+        tmp = tmp -> next ;
+    }
+    printf("\n") ;
 
     /*  Exercise VI Free all node !!
          //use a loop to help
-          
      */
-    
+    //Exercise 6
+
+    while(head!=NULL){
+        tmp = head ;
+        head = head -> next ;
+        printf("free :%3d\n",tmp->value) ;
+        free(tmp) ;
+        
+    }
     return 0;
 }
