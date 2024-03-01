@@ -1,8 +1,9 @@
+name = pond
 compile: main.c 
-	 gcc main.c -o ming
+	 gcc main.c -o $(name)
 
-run: ming
-	 ./ming
+run: $(name)
+	 ./$(name)
 
-clean: ming
-	 rm ming
+clean: $(name)
+	 rm $(name)
